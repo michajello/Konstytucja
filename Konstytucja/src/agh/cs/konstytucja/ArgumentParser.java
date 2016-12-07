@@ -1,5 +1,5 @@
 package agh.cs.konstytucja;
 
-public class FileReader {
+public class ArgumentParser {
 
 }

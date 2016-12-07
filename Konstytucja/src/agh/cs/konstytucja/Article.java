@@ -3,10 +3,10 @@ package agh.cs.konstytucja;
 import java.util.LinkedList;
 
 public class Article {
-	private LinkedList<Chapter> textChapter;
+	private LinkedList<Chapter> textOfArticles;
 
 	public Article() {
-		this.textChapter = new LinkedList<>();
+		this.textOfArticles = new LinkedList<>();
 	}
 
 }

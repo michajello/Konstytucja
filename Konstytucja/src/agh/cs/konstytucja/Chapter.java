@@ -3,10 +3,15 @@ package agh.cs.konstytucja;
 import java.util.LinkedList;
 
 public class Chapter {
-	private LinkedList<String> textChapter;
-
-	public Chapter() {
-		this.textChapter = new LinkedList<>();
+	private int index;
+	private RangeOfArticleInChapters rangeOfArticleInChapters  ;
+	
+	public Chapter(int index, RangeOfArticleInChapters rangeOfArticleInChapters) {
+		super();
+		this.index = index;
+		this.rangeOfArticleInChapters = rangeOfArticleInChapters;
 	}
-
+	
+	
+	
 }
