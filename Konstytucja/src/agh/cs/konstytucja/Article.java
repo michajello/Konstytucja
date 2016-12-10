@@ -1,12 +1,12 @@
 package agh.cs.konstytucja;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class Article {
-	private LinkedList<Chapter> textOfArticles;
+	private ArrayList<String> textOfArticles;
 
 	public Article() {
-		this.textOfArticles = new LinkedList<>();
+		
 	}
 
 }
