@@ -4,16 +4,13 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 public class Chapter {
-	private int index;
-	private RangeOfArticleInChapters rangeOfArticleInChapters  ;
-	private HashMap<Integer, String> subchapters = new HashMap<>();
-	
-	public Chapter(int index, RangeOfArticleInChapters rangeOfArticleInChapters) {
+	protected int index;
+	protected String title;
+	protected RangeOfArticleInChapters rangeOfArticleInChapters  ;
+	protected HashMap<Integer, String> subchapters = new HashMap<>();
+	public Chapter() {
 		super();
-		this.index = index;
-		this.rangeOfArticleInChapters = rangeOfArticleInChapters;
+		rangeOfArticleInChapters=new RangeOfArticleInChapters();
 	}
-	
-	
 	
 }

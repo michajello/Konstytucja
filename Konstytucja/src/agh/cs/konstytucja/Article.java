@@ -3,10 +3,13 @@ package agh.cs.konstytucja;
 import java.util.ArrayList;
 
 public class Article {
-	private ArrayList<String> textOfArticles;
+	private ArrayList<String> textOfArticle;
 
-	public Article() {
+	public Article(ArrayList<String> textOfArticle) {
 		
+		this.textOfArticle = textOfArticle;
 	}
+
+	
 
 }
