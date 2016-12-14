@@ -111,16 +111,18 @@ public class ConstitutionParser {
 
 	private void parseProperText() {
 		int i = beginningOfProperText;
+		StringBuilder builderArticle = new StringBuilder();
 		Chapter chapter = new Chapter();
 		chapter.rangeOfArticleInChapters.beginningOfRange = 0;
-		i++;
+		chapter.title = lines.get(i)+"\n"+lines.get(i+1);
+		i+=2;
 		
 		while (i < lines.size()) {
 			if (RegexWordMatcher.isChapter(lines.get(i))) {
 				chapter.rangeOfArticleInChapters.endOfRange = amountOfArticles;
 				chapters.add(chapter);
 				chapter = new Chapter();
-				chapter.rangeOfArticleInChapters.beginningOfRange = amountOfArticles + 1;
+				chapter.rangeOfArticleInChapters.beginningOfRange = amountOfArticles;
 
 				
 				chapter.title = lines.get(i)+"\n"+lines.get(i+1);
@@ -131,7 +133,7 @@ public class ConstitutionParser {
 
 			} else if (RegexWordMatcher.isArticle(lines.get(i))) {
 				
-				StringBuilder builderArticle = new StringBuilder();
+				builderArticle = new StringBuilder();
 				builderArticle.append(lines.get(i));
 				builderArticle.append("\n");
 				i++;
@@ -143,6 +145,7 @@ public class ConstitutionParser {
 				}
 				
 				i--;
+				articles.add(builderArticle.toString());
 				amountOfArticles++;
 				
 			}
